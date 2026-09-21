@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psique entre Culturas — Arquivo de Pesquisa sobre Psicologia da Migração e Campos da Interface</title>
+<meta name="description" content="Arquivo de pesquisa: timeline, mapa mental e bibliografia da psicologia da migração, psicologia intercultural, etnopsiquiatria, etnopsicologia, etnopsicanálise e psicologia transcultural.">
+<style>
+:root{
+  --paper:#faf6ee;
+  --paper2:#f3ede0;
+  --ink:#191713;
+  --ink2:#57503f;
+  --line:#d9d0bd;
+  --migracao:#2E5E8C;
+  --intercultural:#4E8D8D;
+  --etnopsicologia:#7A9E7E;
+  --etnopsiquiatria:#B5533C;
+  --etnopsicanalise:#6B5B95;
+  --transcultural:#C9A227;
+  --critica:#8a8a7a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Georgia,'Times New Roman','Noto Serif',serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.mono{font-family:ui-monospace,'SF Mono','Cascadia Mono','Courier New',monospace}
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+
+/* ---------- Header ---------- */
+header{
+  border-bottom:1px solid var(--line);
+  padding:22px 0 0;
+  background:
+    repeating-linear-gradient(0deg,transparent,transparent 31px,rgba(25,23,19,.035) 31px,rgba(25,23,19,.035) 32px);
+}
+.hd-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px}
+.brand{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink2)}
+.brand b{color:var(--ink)}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{
+  font-family:ui-monospace,'Courier New',monospace;
+  font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink2);text-decoration:none;padding:8px 12px 10px;
+  border-bottom:2px solid transparent;
+}
+nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* ---------- Hero ---------- */
+.hero{padding:88px 0 72px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:ui-monospace,'Courier New',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink2);margin-bottom:26px}
+.eyebrow::before{content:"—— "}
+h1{
+  font-size:clamp(42px,7vw,84px);
+  line-height:.98;
+  letter-spacing:-.015em;
+  font-weight:700;
+  margin-bottom:28px;
+}
+h1 em{font-style:italic;font-weight:400}
+.hero p.lede{max-width:640px;font-size:19px;color:var(--ink2)}
+.hero-stats{display:flex;gap:48px;margin-top:44px;flex-wrap:wrap}
+.stat .n{font-size:34px;font-weight:700}
+.stat .l{font-family:ui-monospace,'Courier New',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-top:2px}
+
+/* ---------- Sections ---------- */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:40px}
+.sec-head h2{font-size:clamp(28px,4vw,44px);line-height:1.05;letter-spacing:-.01em;margin-top:14px}
+.sec-head p{max-width:620px;color:var(--ink2);margin-top:14px}
+.idx{font-family:ui-monospace,'Courier New',monospace;font-size:12px;color:var(--ink2);letter-spacing:.2em}
+
+/* ---------- Campos (visão geral) ---------- */
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.field{background:var(--paper);padding:28px 26px 30px}
+.field .tag{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;vertical-align:1px}
+.field h3{font-size:21px;margin-bottom:10px}
+.field p{font-size:15px;color:var(--ink2);line-height:1.6}
+.field .who{font-family:ui-monospace,'Courier New',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+
+/* ---------- Timeline ---------- */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:44px}
+.chip{
+  font-family:ui-monospace,'Courier New',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  background:none;border:1px solid var(--line);color:var(--ink2);
+  padding:7px 14px;cursor:pointer;border-radius:2em;
+}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tl{position:relative;margin-left:14px;padding-left:44px;border-left:1px solid var(--ink)}
+.tl-item{position:relative;padding:0 0 42px}
+.tl-item:last-child{padding-bottom:8px}
+.tl-item::before{
+  content:"";position:absolute;left:-51px;top:8px;width:13px;height:13px;border-radius:50%;
+  background:var(--paper);border:3px solid var(--c,var(--ink));
+}
+.tl-year{font-family:ui-monospace,'Courier New',monospace;font-size:13px;letter-spacing:.14em;color:var(--c,var(--ink));font-weight:700}
+.tl-item h4{font-size:19px;margin:4px 0 6px}
+.tl-item p{font-size:15px;color:var(--ink2);max-width:640px}
+.tl-item .f{font-family:ui-monospace,'Courier New',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-top:8px;display:block}
+
+/* ---------- Mapa mental ---------- */
+.mindmap{overflow-x:auto;padding:10px 0}
+.tree,.tree ul{list-style:none}
+.tree{font-size:15px;min-width:640px}
+.tree ul{margin-left:26px;padding-left:26px;border-left:1px solid var(--line)}
+.tree li{margin:10px 0;position:relative}
+.tree li::before{content:"";position:absolute;left:-26px;top:13px;width:26px;border-top:1px solid var(--line)}
+.tree>li::before{display:none}
+.node{
+  display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:2em;
+  background:var(--paper);cursor:default;line-height:1.4;
+}
+.node b{font-weight:700}
+.node small{display:block;font-family:ui-monospace,'Courier New',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.node.root{background:var(--ink);color:var(--paper);border-color:var(--ink);font-size:18px;padding:12px 26px}
+.node.root small{color:#cfc7b4}
+.node.br{cursor:pointer;font-weight:700;border-width:1.5px}
+.node.br::after{content:"−";margin-left:10px;color:var(--ink2)}
+li.closed>.node.br::after{content:"+"}
+li.closed>ul{display:none}
+.node.leaf{background:transparent;border-color:var(--line);color:var(--ink2);font-size:14px}
+.hint{font-family:ui-monospace,'Courier New',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-bottom:22px}
+
+/* ---------- Bibliografia ---------- */
+.bib-controls{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px;align-items:center}
+.bib-search{
+  font-family:ui-monospace,'Courier New',monospace;font-size:13px;
+  background:var(--paper);border:1px solid var(--line);color:var(--ink);
+  padding:9px 14px;min-width:260px;flex:1;max-width:380px;
+}
+.bib-search:focus{outline:none;border-color:var(--ink)}
+table.bib{width:100%;border-collapse:collapse;font-size:14.5px}
+table.bib th{
+  font-family:ui-monospace,'Courier New',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  text-align:left;color:var(--ink2);border-bottom:1.5px solid var(--ink);padding:10px 12px 10px 0;cursor:pointer;user-select:none;
+}
+table.bib td{border-bottom:1px solid var(--line);padding:12px 12px 12px 0;vertical-align:top}
+table.bib tr:hover td{background:var(--paper2)}
+table.bib td.yr{font-family:ui-monospace,'Courier New',monospace;white-space:nowrap}
+table.bib td.cit{font-family:ui-monospace,'Courier New',monospace;text-align:right;white-space:nowrap}
+table.bib a{color:var(--migracao);text-decoration:none;border-bottom:1px dotted var(--migracao)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:0}
+.count{font-family:ui-monospace,'Courier New',monospace;font-size:12px;color:var(--ink2);letter-spacing:.1em;margin-top:18px}
+
+/* ---------- Auditoria ---------- */
+.audit{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:34px}
+.audit>div{background:var(--paper);padding:26px}
+.audit .n{font-size:38px;font-weight:700}
+.audit .l{font-family:ui-monospace,'Courier New',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-top:6px}
+.verdict{border-left:3px solid var(--etnopsicologia);padding:6px 0 6px 20px;max-width:720px}
+.verdict p{font-size:15.5px;color:var(--ink2)}
+
+/* ---------- Relatórios ---------- */
+.reports{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.report{border:1px solid var(--ink);padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;background:var(--paper)}
+.report .k{font-family:ui-monospace,'Courier New',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+.report h3{font-size:22px;line-height:1.2}
+.report p{font-size:14.5px;color:var(--ink2);flex:1}
+.report a.dl{
+  font-family:ui-monospace,'Courier New',monospace;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;padding:12px 22px;align-self:flex-start;
+}
+.report a.dl:hover{background:var(--etnopsiquiatria)}
+.report .meta{font-family:ui-monospace,'Courier New',monospace;font-size:11px;color:var(--ink2);letter-spacing:.08em}
+
+footer{padding:44px 0 60px;color:var(--ink2);font-size:13.5px}
+footer .rule{border-top:1px solid var(--line);margin-bottom:26px;padding-top:26px}
+footer a{color:var(--ink)}
+
+@media(max-width:640px){
+  .hero{padding:56px 0 48px}
+  .hero-stats{gap:28px}
+  .tl{padding-left:32px;margin-left:6px}
+  .tl-item::before{left:-39px}
+  table.bib td:nth-child(4),table.bib th:nth-child(4){display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd-top">
+    <div class="brand mono"><b>Psique entre Culturas</b> · arquivo de pesquisa</div>
+    <nav>
+      <a href="#campos">Campos</a>
+      <a href="#timeline">Linha do tempo</a>
+      <a href="#mapa">Mapa mental</a>
+      <a href="#bibliografia">Bibliografia</a>
+      <a href="#auditoria">Auditoria</a>
+      <a href="#relatorios">Relatórios</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Dossiê · Setembro de 2026 · Pesquisa em psicologia da migração</div>
+    <h1>A psique<br><em>entre culturas</em></h1>
+    <p class="lede">Arquivo vivo da produção científica sobre psicologia da migração, psicologia intercultural e os campos da interface cultura–clínica: etnopsicologia, etnopsiquiatria, etnopsicanálise e psicologia transcultural — de Wundt e Lazarus a Berry, Devereux, Nathan, Moro e a virada decolonial.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="n">6</div><div class="l">campos mapeados</div></div>
+      <div class="stat"><div class="n">28</div><div class="l">obras verificadas</div></div>
+      <div class="stat"><div class="n">28</div><div class="l">marcos na linha do tempo</div></div>
+      <div class="stat"><div class="n">166</div><div class="l">anos de história</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="campos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">01 / Campos</div>
+      <h2>Seis campos, um objeto</h2>
+      <p>Todos estudam a vida psíquica no encontro entre culturas — mas com matrizes, métodos e instituições distintos. O mapa abaixo resume; o mapa mental (seção 03) desenvolve.</p>
+    </div>
+    <div class="fields">
+      <div class="field">
+        <h3><span class="tag" style="background:var(--migracao)"></span>Psicologia da migração</h3>
+        <p>Estuda saúde mental, identidade e adaptação de migrantes e refugiados: prevalências de TEPT e depressão, discriminação percebida, paradoxo do imigrante, intervenções escaláveis (OMS PM+, Step-by-Step).</p>
+        <div class="who">Blackmore · Pascoe &amp; Smart Richman · Fazel · Silove</div>
+      </div>
+      <div class="field">
+        <h3><span class="tag" style="background:var(--intercultural)"></span>Psicologia intercultural</h3>
+        <p>O paradigma quantitativo-comparativo do contato cultural: aculturação bidimensional, modelo ABC da adaptação, identidade étnica, estudos comparativos ICSEY e MIRIPS.</p>
+        <div class="who">Berry · Ward · Sam · Phinney · Van de Vijver</div>
+      </div>
+      <div class="field">
+        <h3><span class="tag" style="background:var(--etnopsicologia)"></span>Etnopsicologia</h3>
+        <p>O tronco fundador: a psique dos povos estudada por via comparativa. Da Völkerpsychologie oitocentista às psicologias indígenas e culturais contemporâneas.</p>
+        <div class="who">Lazarus &amp; Steinthal · Wundt · Díaz-Guerrero</div>
+      </div>
+      <div class="field">
+        <h3><span class="tag" style="background:var(--etnopsiquiatria)"></span>Etnopsiquiatria</h3>
+        <p>A clínica fundada por Devereux: complementarismo, universalidade psíquica, descentramento. Institucionalizada por Nathan no hospital público francês.</p>
+        <div class="who">Devereux · Nathan · Centre Georges-Devereux</div>
+      </div>
+      <div class="field">
+        <h3><span class="tag" style="background:var(--etnopsicanalise)"></span>Etnopsicanálise</h3>
+        <p>A vertente psicanalítica de Devereux: a contratransferência do pesquisador como método, a escuta do sujeito entre dois sistemas culturais, os dispositivos grupais de Avicenne e da Maison de Solenn.</p>
+        <div class="who">Devereux · Moro · Sturm · Baubet</div>
+      </div>
+      <div class="field">
+        <h3><span class="tag" style="background:var(--transcultural)"></span>Psicologia / psiquiatria transcultural</h3>
+        <p>A escola anglófona de McGill (Wittkower) e sua herdeira contemporânea: formulação cultural no DSM-5 (CFI), competência cultural e adaptação cultural de psicoterapias.</p>
+        <div class="who">Wittkower · Kirmayer · Lewis-Fernández · Moro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">02 / Cronologia</div>
+      <h2>Linha do tempo das publicações e marcos</h2>
+      <p>De 1860 a 2025: publicações-programa, fundações institucionais e rupturas que mudaram a direção do conjunto. Filtre por campo.</p>
+    </div>
+    <div class="filters" id="tl-filters"></div>
+    <div class="tl" id="tl"></div>
+  </div>
+</section>
+
+<section id="mapa">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">03 / Estrutura conceitual</div>
+      <h2>Mapa mental dos campos</h2>
+      <p>Árvore interativa: clique nos ramos para expandir ou recolher conceitos, autores e controvérsias.</p>
+    </div>
+    <div class="hint">▸ clique nos ramos coloridos para expandir</div>
+    <div class="mindmap" id="mindmap"></div>
+  </div>
+</section>
+
+<section id="bibliografia">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">04 / Referências</div>
+      <h2>Bibliografia organizada</h2>
+      <p>Todas as publicações estruturantes dos dois relatórios, com contagem aproximada de citações (Google Scholar, set. 2026) e link de acesso. Clique nos cabeçalhos para ordenar; use a busca ou os filtros por campo.</p>
+    </div>
+    <div class="bib-controls">
+      <input class="bib-search mono" id="bib-search" type="search" placeholder="Buscar autor, título…">
+      <div class="filters" id="bib-filters" style="margin-bottom:0"></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table class="bib" id="bib-table">
+      <thead>
+        <tr><th data-k="year">Ano</th><th data-k="ref">Referência</th><th data-k="field">Campo</th><th data-k="cit" style="text-align:right">Citações</th></tr>
+      </thead>
+      <tbody id="bib-body"></tbody>
+    </table>
+    </div>
+    <div class="count" id="bib-count"></div>
+  </div>
+</section>
+
+<section id="auditoria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">05 / Verificação</div>
+      <h2>Auditoria das referências</h2>
+      <p>Todas as referências centrais do relatório principal foram submetidas a verificação bibliométrica (Google Scholar), checando existência, autoria, ano e impacto citacional.</p>
+    </div>
+    <div class="audit">
+      <div><div class="n">28</div><div class="l">referências auditadas</div></div>
+      <div><div class="n">28</div><div class="l">confirmadas</div></div>
+      <div><div class="n">0</div><div class="l">divergências de autoria/ano</div></div>
+      <div><div class="n">14</div><div class="l">rodadas de busca</div></div>
+    </div>
+    <div class="verdict">
+      <p><strong>Resultado:</strong> as obras estruturantes foram confirmadas com correspondência exata de título, autores e ano. A hierarquia citacional confirma a arquitetura descrita no relatório: Berry (1997) ultrapassa 20.500 citações; Pascoe &amp; Smart Richman (2009), 7.180; Schwartz et al. (2010), 4.260. Na tradição francófona — estruturalmente menos indexada por publicar em francês e em livros — <em>La folie des autres</em> (Nathan, 1986) acumula ~880 registros citantes e a crítica de Fassin (1999/2000), ~290. Detalhes no relatório complementar.</p>
+    </div>
+  </div>
+</section>
+
+<section id="relatorios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">06 / Documentos</div>
+      <h2>Relatórios completos</h2>
+      <p>Os dois relatórios que alimentam este arquivo, em PDF.</p>
+    </div>
+    <div class="reports">
+      <div class="report">
+        <div class="k">Relatório principal · v2</div>
+        <h3>Psicologia, Migração e Psicologia Intercultural</h3>
+        <p>Panorama acadêmico global em 12 seções: fundamentos históricos, modelos teóricos (Berry, Ward, Hofstede), evidências de saúde mental, jovens e famílias, clínica e intervenção, os campos da interface cultura–clínica (etnopsicologia, etnopsiquiatria, etnopsicanálise, psicologia transcultural), crítica metodológica, produção lusófona e agenda futura.</p>
+        <div class="meta">30 páginas · ~10.600 palavras · 5 figuras · 4 tabelas</div>
+        <a class="dl" href="relatorio_psicologia_migracao.pdf">Baixar PDF ↓</a>
+      </div>
+      <div class="report">
+        <div class="k">Relatório complementar</div>
+        <h3>Verificação de Referências e Análise Relacional</h3>
+        <p>Auditoria bibliométrica das 28 referências centrais (Tabela 1, com contagens de citações) e análise relacional dos seis campos: três troncos genealógicos, quatro pontos de convergência (CFI do DSM-5, metanálises de adaptação cultural, modelos ecológicos, trauma), quatro pontos de divergência (medida × interpretação, universalismo × culturalismo, crítica psicométrica, objeto) e dez pontos de inflexão (1860–2025).</p>
+        <div class="meta">11 páginas · ~3.100 palavras · 1 figura · 1 tabela</div>
+        <a class="dl" href="relatorio_complementar_verificacao.pdf">Baixar PDF ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="rule"></div>
+    <p><strong>Psique entre Culturas</strong> — arquivo de pesquisa compilado a partir de 27 rodadas de busca bibliográfica e bibliométrica (set. 2026). Contagens de citações são instantâneos aproximados do Google Scholar. Conteúdo com fins acadêmicos.</p>
+  </div>
+</footer>
+
+<script>
+const FIELDS = {
+  migracao:      {name:'Psicologia da migração', color:'#2E5E8C'},
+  intercultural: {name:'Psicologia intercultural', color:'#4E8D8D'},
+  etnopsicologia:{name:'Etnopsicologia', color:'#7A9E7E'},
+  etnopsiquiatria:{name:'Etnopsiquiatria', color:'#B5533C'},
+  etnopsicanalise:{name:'Etnopsicanálise', color:'#6B5B95'},
+  transcultural: {name:'Psiquiatria transcultural', color:'#C9A227'},
+  transversal:   {name:'Transversal / crítica', color:'#8a8a7a'},
+};
+
+/* ============ TIMELINE ============ */
+const TIMELINE = [
+  {y:'1860', f:'etnopsicologia', t:'Fundação da etnopsicologia', d:'Lazarus & Steinthal criam o Zeitschrift für Völkerpsychologie und Sprachwissenschaft: a psique dos povos como objeto científico.'},
+  {y:'1900–1920', f:'etnopsicologia', t:'Völkerpsychologie de Wundt', d:'Os dez volumes de Wilhelm Wundt sistematizam a psicologia comparativa dos povos — programa depois abandonado pela psicologia experimental.'},
+  {y:'1936', f:'intercultural', t:'Nasce o conceito de aculturação', d:'Redfield, Linton & Herskovits publicam o memorando que define aculturação como mudança decorrente do contato contínuo entre grupos.'},
+  {y:'1951', f:'etnopsiquiatria', t:'Devereux cunha "psiquiatria transcultural"', d:'Georges Devereux formula o complementarismo e propõe o termo — que depois abandonará, adotando "etnopsiquiatria" (empréstimo de Louis Mars).'},
+  {y:'1955', f:'transcultural', t:'Unidade de McGill', d:'Eric Wittkower funda a Seção/Unidade de Pesquisa em Psiquiatria Transcultural da Universidade McGill, com Fried e Ellenberger.'},
+  {y:'1970', f:'intercultural', t:'Journal of Cross-Cultural Psychology', d:'A revista fundadora do campo quantitativo-comparativo; a IACCP é criada em 1972.'},
+  {y:'1979', f:'etnopsicanalise', t:'Primeira consulta de Avicenne', d:'Tobie Nathan inaugura a consulta etnopsiquiátrica no serviço de Serge Lebovici (Bobigny): a clínica da cultura entra no hospital público.'},
+  {y:'1986', f:'etnopsiquiatria', t:'La folie des autres', d:'Nathan publica seu tratado de etnopsiquiatria clínica (~880 citações), sistematizando o dispositivo grupal e a teoria das terapias tradicionais.'},
+  {y:'1993', f:'transversal', t:'Assimilação segmentada', d:'Portes & Zhou sociologizam a adaptação: contextos de recepção produzem trajetórias divergentes para a segunda geração.'},
+  {y:'1997', f:'intercultural', t:'A síntese de Berry', d:'"Immigration, acculturation, and adaptation" (Applied Psychology) consolida o modelo bidimensional — ultrapassa 20.500 citações.'},
+  {y:'1999–2000', f:'etnopsiquiatria', t:'Controvérsia Fassin–Nathan', d:'Didier Fassin publica a crítica do culturalismo na revista Genèses e o livro Les politiques de l\'ethnopsychiatrie; Nathan responde na Genèses 38.'},
+  {y:'2001', f:'intercultural', t:'Identidade étnica e crítica psicométrica', d:'Phinney et al. articulam identidade e bem-estar; Rudmin & Ahmadzadeh abrem a crítica psicométrica ao modelo de Berry.'},
+  {y:'2006', f:'transcultural', t:'Evidência da adaptação cultural', d:'Griner & Smith publicam a metanálise (76 estudos, d ≈ 0,45) das intervenções de saúde mental culturalmente adaptadas.'},
+  {y:'2008', f:'intercultural', t:'ICSEY — jovens imigrantes', d:'Sam, Vedder, Ward e Horenczyk publicam o grande estudo comparativo de adaptação de jovens imigrantes em 13 países.'},
+  {y:'2009', f:'migracao', t:'Metanálise da discriminação', d:'Pascoe & Smart Richman quantificam o efeito da discriminação percebida sobre a saúde (r ≈ −0,20; 7.180 citações).'},
+  {y:'2010', f:'etnopsicanalise', t:'Cultura, trauma e subjetividade', d:'Sturm, Baubet & Moro explicitam a abordagem etnopsicanalítica francesa do trauma; Schwartz et al. republicam a aculturação em versão ampliada.'},
+  {y:'2013', f:'transcultural', t:'DSM-5 e a CFI', d:'O manual diagnóstico da APA incorpora a Entrevista de Formulação Cultural — a cultura entra no diagnóstico padrão.'},
+  {y:'2015–16', f:'migracao', t:'Crise dos refugiados e manual CFI', d:'O deslocamento sírio dispara a pesquisa em saúde mental de refugiados; sai o DSM-5 Handbook on the CFI (Lewis-Fernández et al.).'},
+  {y:'2016', f:'etnopsicanalise', t:'Clínica Transcultural da SBPSP', d:'A Sociedade Brasileira de Psicanálise de São Paulo institui sua Clínica Transcultural — principal dispositivo do gênero no Brasil.'},
+  {y:'2018', f:'transcultural', t:'Metanálises de segunda geração', d:'Soto et al. e Rathod et al. refinam a evidência sobre adaptações culturais e competência multicultural do terapeuta.'},
+  {y:'2019', f:'etnopsicanalise', t:'Devereux no Brasil', d:'Domingues, Honda & Reis (UEM) publicam a introdução à clínica transcultural a partir do filme Jimmy P.; a UEM já soma 12 teses sobre Devereux.'},
+  {y:'2020', f:'migracao', t:'Metanálise Blackmore', d:'Prevalência de TEPT e depressão em ~31,5% entre refugiados e solicitantes de asilo (1.350 citações); Bhatia publica Decolonizing Psychology.'},
+  {y:'2021', f:'etnopsicanalise', t:'Etnopsicanálise no Brasil: o balanço', d:'Siqueira et al. mapeiam a produção brasileira: apenas 6 trabalhos entre 2010 e 2019 — campo emergente e concentrado.'},
+  {y:'2023', f:'transversal', t:'Virada decolonial', d:'Savaş & Dutt propõem psicologia decolonial e interseccional para a migração forçada; cresce a crítica ao viés WEIRD.'},
+  {y:'2025', f:'transversal', t:'Portes & Zhou, 30 anos depois', d:'Os autores revisitam a assimilação segmentada três décadas depois — balanço de um conceito que atravessou sociologia e psicologia.'},
+];
+
+/* ============ MINDMAP ============ */
+const MINDMAP = {
+  label:'Psique entre culturas', sub:'objeto comum · 1860–2026',
+  children:[
+    {f:'migracao', label:'Psicologia da migração', children:[
+      {label:'Saúde mental de refugiados', sub:'TEPT 31,5% · depressão 31,5% (Blackmore 2020)'},
+      {label:'Discriminação percebida', sub:'r ≈ −0,20 (Pascoe & Smart Richman 2009)'},
+      {label:'Paradoxo do imigrante', sub:'saúde inicial melhor que a nativa'},
+      {label:'Intervenções escaláveis', sub:'OMS PM+ · Step-by-Step · EMDR/NET'},
+    ]},
+    {f:'intercultural', label:'Psicologia intercultural', children:[
+      {label:'Modelo de Berry', sub:'integração · assimilação · separação · marginalização'},
+      {label:'Modelo ABC de Ward', sub:'afetivo · comportamental · cognitivo'},
+      {label:'Identidade étnica', sub:'Phinney 2001 · biculturalismo'},
+      {label:'Estudos comparativos', sub:'ICSEY (13 países) · MIRIPS (21 sociedades)'},
+      {label:'Crítica interna', sub:'Rudmin 2001/2003 · 126 taxonomias rivais'},
+    ]},
+    {f:'etnopsicologia', label:'Etnopsicologia', children:[
+      {label:'Völkerpsychologie', sub:'Lazarus & Steinthal 1860 · Wundt 1900–1920'},
+      {label:'Psicologias indígenas', sub:'Díaz-Guerrero · etnopsicologia mexicana'},
+      {label:'Psicologias culturais', sub:'Shweder · cognição culturalmente situada'},
+    ]},
+    {f:'etnopsiquiatria', label:'Etnopsiquiatria', children:[
+      {label:'Complementarismo', sub:'Devereux: duplo discurso disciplinado (Bohr)'},
+      {label:'Universalidade psíquica', sub:'contra o relativismo absoluto'},
+      {label:'Descentramento', sub:'a própria cultura como uma entre outras'},
+      {label:'Dispositivo de Nathan', sub:'Avicenne 1979 · consulta grupal ~15 terapeutas'},
+      {label:'Controvérsia', sub:'Fassin 1999/2000 × resposta de Nathan'},
+    ]},
+    {f:'etnopsicanalise', label:'Etnopsicanálise', children:[
+      {label:'Contratransferência do pesquisador', sub:'Devereux 1967 · From Anxiety to Method'},
+      {label:'Clínica do exílio', sub:'Moro · Maison de Solenn · Cochin'},
+      {label:'Cultura, trauma, subjetividade', sub:'Sturm · Baubet · Moro 2010'},
+      {label:'Recepção brasileira', sub:'UEM · SBPSP Clínica Transcultural (2016)'},
+    ]},
+    {f:'transcultural', label:'Psiquiatria transcultural', children:[
+      {label:'Escola de McGill', sub:'Wittkower 1955 · Transcultural Psychiatry'},
+      {label:'CFI / DSM-5', sub:'Lewis-Fernández · Kirmayer 2013–2015'},
+      {label:'Competência cultural', sub:'Griner & Smith 2006 · Soto 2018 · Rathod 2018'},
+    ]},
+    {f:'transversal', label:'Tensões estruturantes', children:[
+      {label:'Medida × interpretação', sub:'nomotético × ideográfico-clínico'},
+      {label:'Universalismo × culturalismo', sub:'reificação × etnocentrismo'},
+      {label:'Virada decolonial', sub:'Bhatia 2020 · Savaş & Dutt 2023 · viés WEIRD'},
+      {label:'Ponte empírica', sub:'metanálises validam a clínica cultural'},
+    ]},
+  ]
+};
+
+/* ============ BIBLIOGRAFIA ============ */
+const BIB = [
+  {y:1997, f:'intercultural', a:'Berry, J. W.', t:'Immigration, acculturation, and adaptation. Applied Psychology, 46(1)', c:20500, u:'https://iaap-journals.onlinelibrary.wiley.com/doi/abs/10.1111/j.1464-0597.1997.tb01087.x'},
+  {y:2009, f:'migracao', a:'Pascoe, E. A. & Smart Richman, L.', t:'Perceived discrimination and health: A meta-analytic review. Psychological Bulletin', c:7180, u:'https://pmc.ncbi.nlm.nih.gov/articles/PMC2747726/'},
+  {y:2010, f:'intercultural', a:'Schwartz, S. J. et al.', t:'Rethinking the concept of acculturation. American Psychologist', c:4260, u:'https://pmc.ncbi.nlm.nih.gov/articles/PMC3700543/'},
+  {y:2001, f:'intercultural', a:'Phinney, J. S. et al.', t:'Ethnic identity, immigration, and well-being. Journal of Social Issues', c:3330, u:'https://spssi.onlinelibrary.wiley.com/doi/abs/10.1111/0022-4537.00225'},
+  {y:1999, f:'intercultural', a:'Ward, C. & Kennedy, A.', t:'The measurement of sociocultural adaptation. IJIR', c:2302, u:'https://www.sciencedirect.com/science/article/abs/pii/S0147176799000940'},
+  {y:2006, f:'transcultural', a:'Griner, D. & Smith, T. B.', t:'Culturally adapted mental health intervention: A meta-analytic review. Psychotherapy', c:2122, u:'https://pubmed.ncbi.nlm.nih.gov/16737300/'},
+  {y:2003, f:'transversal', a:'Rudmin, F. W.', t:'Critical history of the acculturation psychology. IJIR', c:1780, u:'https://scholarworks.gvsu.edu/orpc/vol8/iss1/8/'},
+  {y:1994, f:'intercultural', a:'Ward, C. & Kennedy, A.', t:'Acculturation strategies, psychological adjustment, and sociocultural competence. IJIR', c:1586, u:'https://www.sciencedirect.com/science/article/pii/0147176794900361'},
+  {y:2020, f:'migracao', a:'Blackmore, R. et al.', t:'Prevalence of mental illness in refugees and asylum seekers: meta-analysis. PLOS ONE', c:1351, u:'https://pmc.ncbi.nlm.nih.gov/articles/PMC7505461/'},
+  {y:1986, f:'etnopsiquiatria', a:'Nathan, T.', t:'La folie des autres: traité d\'ethnopsychiatrie clinique. Paris: Dunod', c:883, u:'https://www.dunod.com/sciences-humaines-et-sociales/folie-autres-traite-ethnopsychiatrie-clinique-0'},
+  {y:2018, f:'transcultural', a:'Soto, A. et al.', t:'Cultural adaptations and therapist multicultural competence: two meta-analyses. J. Counseling Psychology', c:531, u:'https://pubmed.ncbi.nlm.nih.gov/29516595/'},
+  {y:2001, f:'transversal', a:'Rudmin, F. W. & Ahmadzadeh, V.', t:'Psychometric critique of acculturation psychology. Scandinavian J. Psychology', c:402, u:'https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9450.00213'},
+  {y:2018, f:'transcultural', a:'Rathod, S. et al.', t:'Culturally adapted mental health interventions: review of meta-analyses. World Psychiatry', c:374, u:'https://pubmed.ncbi.nlm.nih.gov/29216768/'},
+  {y:2015, f:'transcultural', a:'Lewis-Fernández, R. et al.', t:'DSM-5 Handbook on the Cultural Formulation Interview. APA Publishing', c:358, u:'https://pubmed.ncbi.nlm.nih.gov/26967548/'},
+  {y:2016, f:'transcultural', a:'Kirmayer, L. J. & Ryder, A. G.', t:'Culture and psychopathology. Current Opinion in Psychology', c:275, u:'https://www.sciencedirect.com/science/article/pii/S2352250X15301452'},
+  {y:2000, f:'etnopsiquiatria', a:'Fassin, D.', t:'Les politiques de l\'ethnopsychiatrie. Paris: La Découverte', c:183, u:'https://editions.ehess.fr/ouvrages/ouvrage/les-politiques-de-l-ethnopsychiatrie/'},
+  {y:1999, f:'etnopsiquiatria', a:'Fassin, D.', t:'L\'ethnopsychiatrie et ses réseaux. Genèses, 35', c:104, u:'https://www.cairn.info/revue-geneses-1999-4-page-2.htm'},
+  {y:2020, f:'transversal', a:'Bhatia, S.', t:'Decolonizing Psychology: Power, Citizenship and Identity. Springer', c:102, u:'https://link.springer.com/book/10.1007/978-3-030-36291-5'},
+  {y:2020, f:'transcultural', a:'Aggarwal, N. K. et al.', t:'The Cultural Formulation Interview: progress and future directions. Psychiatric Services', c:92, u:'https://pubmed.ncbi.nlm.nih.gov/32648813/'},
+  {y:2010, f:'etnopsicanalise', a:'Sturm, G., Baubet, T. & Moro, M. R.', t:'Culture, trauma, and subjectivity: the French ethnopsychoanalytic approach. Traumatology', c:61, u:'https://pubmed.ncbi.nlm.nih.gov/20503256/'},
+  {y:2011, f:'etnopsicanalise', a:'Sturm, G., Nadig, M. & Moro, M. R.', t:'Current developments in French ethnopsychoanalysis. Transcultural Psychiatry', c:59, u:'https://journals.sagepub.com/doi/10.1177/1363461510397477'},
+  {y:2005, f:'transcultural', a:'Bains, J.', t:'Race, culture and psychiatry: a history of transcultural psychiatry. History of Psychiatry', c:113, u:'https://journals.sagepub.com/doi/10.1177/0957154X05043098'},
+  {y:2023, f:'transversal', a:'Savaş, Ö. & Dutt, A.', t:'Decolonial and intersectional feminist psychology for forced migration. Human Rights Psychology', c:36, u:'https://humanrightspsychology.org/decolonial-and-intersectional-feminist-psychology-for-the-future-of-forced-migration-and-refugee-resettlement/'},
+  {y:2000, f:'transcultural', a:'Prince, R.', t:'Transcultural psychiatry: personal experiences and Canadian perspectives. Transcultural Psychiatry', c:36, u:'https://journals.sagepub.com/doi/10.1177/136346150003700104'},
+  {y:2009, f:'etnopsicanalise', a:'Sturm, G. et al.', t:'Transcultural clinical work with immigrants, asylum seekers and refugees at Avicenne Hospital', c:26, u:'https://pubmed.ncbi.nlm.nih.gov/19807298/'},
+  {y:2025, f:'transversal', a:'Portes, A. & Zhou, M.', t:'Segmented assimilation: reflections on a three-decade concept. Ethnic and Racial Studies', c:26, u:'https://www.tandfonline.com/doi/abs/10.1080/01419870.2024.2445082'},
+  {y:2018, f:'transcultural', a:'Delille, E.', t:'Eric Wittkower and Montréal\'s Transcultural Psychiatry Research Unit. History of Psychiatry', c:23, u:'https://journals.sagepub.com/doi/10.1177/0957154X18790526'},
+  {y:2019, f:'etnopsicanalise', a:'Domingues, E., Honda, H. & Reis, J. G.', t:'A etnopsicanálise de Devereux no filme Jimmy P.: introdução à clínica transcultural', c:10, u:'https://www.scielo.br/j/pe/a/GNmwgqJXQgGY9bHbmVm3MDC/?lang=pt'},
+  {y:2020, f:'transcultural', a:'Carretier, E. et al.', t:'Qualitative assessment of transcultural psychotherapy (Moro). Transcultural Psychiatry', c:10, u:'https://pubmed.ncbi.nlm.nih.gov/32085505/'},
+];
+
+/* ============ RENDER ============ */
+const $ = s => document.querySelector(s);
+
+function renderFilters(elId, onPick){
+  const box = document.getElementById(elId);
+  box.innerHTML = '';
+  const all = document.createElement('button');
+  all.className = 'chip mono on'; all.textContent = 'Todos';
+  all.onclick = () => { box.querySelectorAll('.chip').forEach(c=>c.classList.remove('on')); all.classList.add('on'); onPick(null); };
+  box.appendChild(all);
+  for (const [k,v] of Object.entries(FIELDS)){
+    const b = document.createElement('button');
+    b.className = 'chip mono'; b.textContent = v.name;
+    b.style.borderColor = v.color + '55';
+    b.onclick = () => { box.querySelectorAll('.chip').forEach(c=>c.classList.remove('on')); b.classList.add('on'); onPick(k); };
+    box.appendChild(b);
+  }
+}
+
+function renderTimeline(filter){
+  const tl = document.getElementById('tl');
+  tl.innerHTML = '';
+  TIMELINE.filter(e => !filter || e.f === filter).forEach(e => {
+    const f = FIELDS[e.f];
+    const div = document.createElement('div');
+    div.className = 'tl-item';
+    div.style.setProperty('--c', f.color);
+    div.innerHTML = `<div class="tl-year">${e.y}</div><h4>${e.t}</h4><p>${e.d}</p><span class="f">${f.name}</span>`;
+    tl.appendChild(div);
+  });
+}
+
+function mindNode(n, isRoot){
+  const li = document.createElement('li');
+  const span = document.createElement('span');
+  span.className = 'node ' + (isRoot ? 'root' : n.children ? 'br' : 'leaf');
+  if (!isRoot && n.f) span.style.borderColor = FIELDS[n.f].color;
+  if (!isRoot && n.f) span.style.color = n.children ? FIELDS[n.f].color : 'var(--ink2)';
+  span.innerHTML = `<b>${n.label}</b>` + (n.sub ? `<small>${n.sub}</small>` : '');
+  li.appendChild(span);
+  if (n.children){
+    const ul = document.createElement('ul');
+    n.children.forEach(c => ul.appendChild(mindNode(c, false)));
+    li.appendChild(ul);
+    if (!isRoot){
+      li.classList.add('closed');
+      span.onclick = () => li.classList.toggle('closed');
+    }
+  }
+  return li;
+}
+
+function renderMindmap(){
+  const box = document.getElementById('mindmap');
+  const ul = document.createElement('ul');
+  ul.className = 'tree';
+  ul.appendChild(mindNode(MINDMAP, true));
+  box.innerHTML = '';
+  box.appendChild(ul);
+}
+
+let bibFilter = null, bibQuery = '', bibSort = {k:'cit', dir:-1};
+function renderBib(){
+  const body = document.getElementById('bib-body');
+  let rows = BIB.filter(r => (!bibFilter || r.f === bibFilter) &&
+    (!bibQuery || (r.a + ' ' + r.t).toLowerCase().includes(bibQuery)));
+  rows.sort((x,y) => {
+    const k = bibSort.k;
+    let a = k==='ref' ? x.a : k==='field' ? FIELDS[x.f].name : x[k];
+    let b = k==='ref' ? y.a : k==='field' ? FIELDS[y.f].name : y[k];
+    return (a < b ? -1 : a > b ? 1 : 0) * bibSort.dir;
+  });
+  body.innerHTML = rows.map(r => {
+    const f = FIELDS[r.f];
+    return `<tr><td class="yr">${r.y}</td>
+      <td><strong>${r.a}</strong> — <a href="${r.u}" target="_blank" rel="noopener">${r.t}</a></td>
+      <td><span class="dot" style="background:${f.color}"></span>${f.name}</td>
+      <td class="cit">${r.c ? r.c.toLocaleString('pt-BR') : '—'}</td></tr>`;
+  }).join('');
+  document.getElementById('bib-count').textContent =
+    rows.length + ' referências · citações aproximadas (Google Scholar, set. 2026)';
+}
+
+document.querySelectorAll('#bib-table th').forEach(th => {
+  th.onclick = () => {
+    const k = th.dataset.k;
+    bibSort.dir = bibSort.k === k ? -bibSort.dir : (k === 'cit' ? -1 : 1);
+    bibSort.k = k;
+    renderBib();
+  };
+});
+document.getElementById('bib-search').oninput = e => {
+  bibQuery = e.target.value.trim().toLowerCase(); renderBib();
+};
+
+renderFilters('tl-filters', renderTimeline);
+renderFilters('bib-filters', k => { bibFilter = k; renderBib(); });
+renderTimeline(null);
+renderMindmap();
+renderBib();
+</script>
+</body>
+</html>
